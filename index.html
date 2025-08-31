@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adil Topup Shop</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f4f4; margin: 0; padding: 0; }
+    header { background: green; color: white; padding: 15px; text-align: center; font-size: 22px; }
+    .box { max-width: 400px; margin: 30px auto; padding: 20px; background: white; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0,0,0,0.2);}
+    input, select, button { width: 100%; margin: 10px 0; padding: 10px; border-radius: 5px; border: 1px solid #ccc; }
+    button { background: green; color: white; font-weight: bold; cursor: pointer; }
+    button:hover { background: darkgreen; }
+    footer { text-align: center; padding: 15px; font-size: 14px; color: #666; }
+    #msg { color: green; font-weight: bold; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <header>🌟 Adil Topup Shop 🌟</header>
+
+  <div class="box">
+    <h2>Game Topup Form</h2>
+    <form id="topupForm">
+      <input type="text" id="gameId" placeholder="Enter Game ID" required>
+      <select id="amount">
+        <option value="60">60 Diamonds - 50৳</option>
+        <option value="120">120 Diamonds - 100৳</option>
+        <option value="240">240 Diamonds - 200৳</option>
+      </select>
+      <input type="text" id="number" placeholder="Bkash/Nagad Number" required>
+      <button type="submit">Submit Order</button>
+    </form>
+    <p id="msg"></p>
+  </div>
+
+  <footer>
+    © 2025 Adil Topup Shop | All Rights Reserved
+  </footer>
+
+  <script>
+    document.getElementById("topupForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      document.getElementById("msg").innerText = "✅ Order Placed! Please send payment manually.";
+    });
+  </script>
+</body>
+</html>
